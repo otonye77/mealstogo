@@ -6,7 +6,7 @@ import RestaurantInfoCard from "../component/restaurants-info-card.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
 const SearchContainer = styled.View`
@@ -16,35 +16,20 @@ const SearchContainer = styled.View`
 const RestaurantListContainer = styled.View`
   flex: 1;
   padding: 16px;
-  background-color: blue;
+  background-color: white;
 `;
 
 const RestaurantsScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <SearchContainer style={styles.search}>
+    <SafeAreaView>
+      <SearchContainer>
         <Searchbar />
       </SearchContainer>
-      <RestaurantListContainer style={styles.list}>
+      <RestaurantListContainer>
         <RestaurantInfoCard />
       </RestaurantListContainer>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight,
-  },
-  search: {
-    padding: 16,
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
-  },
-});
 
 export default RestaurantsScreen;
