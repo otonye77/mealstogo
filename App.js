@@ -4,9 +4,8 @@ import RestaurantsScreen from "./src/features/restaurants/screens/restaurants.sc
 export default function App() {
   return (
     <>
-       <RestaurantsScreen />
+      <RestaurantsScreen />
       <ExpoStatusBar style="auto" />
     </>
   );
 }
-
