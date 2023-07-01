@@ -17,4 +17,8 @@ export const Spacer = ({ variant }) => {
  if(variant === "top.medium"){
     return <TopMedium />
  }
+ if(variant === "top.large"){
+    return <TopLarge />
+ }
+ return <TopSmall />
 };
