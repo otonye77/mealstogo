@@ -5,15 +5,16 @@ const TopSmall = styled.View`
   margintop: 4px;
 `;
 
-const Medium = styled.View`
+const TopMedium = styled.View`
   margintop: 8px;
 `;
 
-const Large = styled.View`
+const TopLarge = styled.View`
   margintop: 16px;
 `;
 
 export const Spacer = ({ variant }) => {
-  switch (variant) {
-  }
+ if(variant === "top.medium"){
+    return <TopMedium />
+ }
 };
